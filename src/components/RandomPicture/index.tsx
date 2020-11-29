@@ -8,6 +8,11 @@ import Pic5 from 'assets/photos/5.jpeg';
 import Pic6 from 'assets/photos/6.jpeg';
 import Pic7 from 'assets/photos/7.jpeg';
 import Pic8 from 'assets/photos/8.jpeg';
+import Pic9 from 'assets/photos/9.jpeg';
+import Pic10 from 'assets/photos/10.jpg';
+import Pic11 from 'assets/photos/11.jpeg';
+import Pic12 from 'assets/photos/12.jpeg';
+import Pic13 from 'assets/photos/13.jpeg';
 
 import { ImageSection } from './style';
 
@@ -16,7 +21,22 @@ type RandomPictureProps = {
 };
 
 const RandomPicture = ({ idx }: RandomPictureProps) => {
-  const imgArr = [Pic0, Pic1, Pic2, Pic3, Pic4, Pic5, Pic6, Pic7, Pic8];
+  const imgArr = [
+    Pic0,
+    Pic1,
+    Pic2,
+    Pic3,
+    Pic4,
+    Pic5,
+    Pic6,
+    Pic7,
+    Pic8,
+    Pic9,
+    Pic10,
+    Pic11,
+    Pic12,
+    Pic13,
+  ];
   return (
     <ImageSection>
       {Number.isInteger(idx) ? (

@@ -17,7 +17,7 @@ type Idea = {
   description: string;
 };
 
-const IMG_ARR_LENGTH = 9;
+const IMG_ARR_LENGTH = 13;
 
 const PhaseOne = () => {
   const emptyIdea = {
