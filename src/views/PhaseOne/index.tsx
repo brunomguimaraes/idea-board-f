@@ -28,7 +28,7 @@ const PhaseOne = () => {
   const [arr, setArr] = useState(Array.from(Array(IMG_ARR_LENGTH).keys()));
 
   const initialRandomImage = () => {
-    const randomIndex = Math.floor(Math.random() * (IMG_ARR_LENGTH + 1));
+    const randomIndex = Math.floor(Math.random() * IMG_ARR_LENGTH);
     const randomNumber = arr[randomIndex];
     arr.splice(randomIndex, 1);
     setArr(arr);
