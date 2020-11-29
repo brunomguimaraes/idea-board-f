@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import RandomPicture from 'components/RandomPicture';
+import Timer from 'react-compound-timer/build/components/Timer/Timer';
 import {
   BigDescription,
   SmallDescription,
@@ -8,6 +9,7 @@ import {
   AddButton,
   NewImageButton,
   IdeasList,
+  TimerBox,
   Grid,
 } from './style';
 
@@ -58,11 +60,29 @@ const PhaseOne = () => {
     arr.splice(randomIndex, 1);
     setArr(arr);
     setCurrIdx(randomNumber);
+    document.getElementById('reset-button')?.click();
   };
 
   return (
     <Grid>
       <BigDescription placeholder="descrição do problema" />
+      <TimerBox>
+        <Timer>
+          {({ reset }: any) => (
+            <>
+              <div>
+                <Timer.Seconds />
+              </div>
+              <br />
+              <div>
+                <NewImageButton id="reset-button" onClick={reset}>
+                  Reset Timer
+                </NewImageButton>
+              </div>
+            </>
+          )}
+        </Timer>
+      </TimerBox>
       <NewImageButton onClick={() => changeImgIdx()}>Mudar Imagem</NewImageButton>
       <RandomPicture idx={currIdx} />
       <IdeasList>

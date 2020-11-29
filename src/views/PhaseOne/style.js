@@ -10,10 +10,10 @@ export const Grid = styled.div`
   display: grid;
   column-gap: 8px;
   row-gap: 16px;
-  grid-template-columns: 10% auto 10%;
+  grid-template-columns: 10% auto 20%;
   grid-template-rows: auto 60% auto auto;
   grid-template-areas: 
-  ". header ."
+  ". header timer"
   "imagebutton image imagelist"
   ". description ."
   ". footer .";
@@ -28,6 +28,10 @@ export const BigDescription = styled.input`
   height: 80px;
   padding: 8px;
   border-radius: 8px;
+`;
+
+export const TimerBox = styled.div`
+  grid-area: timer;
 `;
 
 export const SmallDescription = styled.input`
