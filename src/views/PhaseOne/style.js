@@ -21,18 +21,6 @@ export const Grid = styled.div`
 }
 `;
 
-export const ImageSection = styled.div`
-  grid-area: image;
-  max-width: 50vw;
-  margin: auto;
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-`;
-
 export const BigDescription = styled.input`
   grid-area: header;
   border: 2px solid ${black};
@@ -60,6 +48,10 @@ export const SmallDescriptionFooter = styled.input`
   border-radius: 8px;
 `;
 
+export const IdeasList = styled.ul`
+  grid-area: imagelist;
+`;
+
 export const AddButton = styled.button`
   grid-area: footer;
   justify-self: end;
@@ -81,6 +73,35 @@ export const AddButton = styled.button`
   &:hover {
     background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
     background-color: #5cb811;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+`;
+
+export const NewImageButton = styled.button`
+  grid-area: imagebutton;
+  justify-self: start;
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+
+  &:hover {
+    background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color: #6c7c7c;
   }
 
   &:active {
